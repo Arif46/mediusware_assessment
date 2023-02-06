@@ -63,6 +63,28 @@
             </div>
         </div>
     </li>
+    <!-- Test Menu-->
+    <li class="nav-item {{ Request::is('product/*') || Request::is('product')   ? 'active' : '' }}">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#product" aria-expanded="true" aria-controls="collapseTwo">
+            <i class="fas fa-fw fa-cog"></i>
+            <span>Product Vue</span>
+        </a>
+        <div id="product"
+             class="collapse {{ Request::is('product/*') || Request::is('product') || Request::is('product-variant') || Request::is('product-variant/*') ? 'show' : '' }}"
+             aria-labelledby="headingTwo"
+             data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Product Option:</h6>
+                <a class="collapse-item {{ url()->current() == route('product-variant.index') ? 'active' : '' }}"
+                   href="{{ route('product-variant.index') }}">Variant</a>
+                <h6 class="collapse-header">Custom Components:</h6>
+                <a class="collapse-item {{ url()->current() == route('product.create') ? 'active' : '' }}" href="{{ route('product.create') }}">Create
+                    Product</a>
+                <a class="collapse-item {{ url()->current() == route('product.index') ? 'active' : '' }}" href="{{ route('product.index') }}">All
+                    Product</a>
+            </div>
+        </div>
+    </li>
 
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item {{ Request::is('blog/*')  || Request::is('blog')? 'active' : '' }}">
