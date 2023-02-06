@@ -79,8 +79,10 @@
 </main>--}}
 {{--</div>--}}
 {{--</body>--}}
+{{-- <router-view></router-view> --}}
 
 <body id="page-top">
+{{-- <div id="app"></div> --}}
 
 <!-- Page Wrapper -->
 <div id="wrapper">
@@ -155,6 +157,6 @@
 </div>
 
 <!-- Scripts -->
-<script src="{{ asset('js/app.js') }}" defer></script>
+<script src="{{ asset('js/app.js') }}" type="text/javascript"></script>
 </body>
 </html>
